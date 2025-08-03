@@ -7,6 +7,7 @@
     <style>
         h2{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: uppercase;
         }
         .same{
             background-color: lightgreen;
@@ -33,9 +34,18 @@
     <h2>WORKING ON VARIABLES</h2>
     <hr>
     <main>
-        <button class="same">Add to Bag</button>
-        <button class="whishlist">MOVE TO WHISHLIST</button>
-        <button class="same">Add 1+1 sale item</button>
+        <button class="same" onclick="cartQuantity= cartQuantity + 1; document.querySelector('#cart-Summary').innerText = `Your Bag has ${cartQuantity} items.`">Add to Bag</button>
+        
+        <button class="whishlist" onclick="cartQuantity= cartQuantity - 1; document.querySelector('#cart-Summary').innerText = `Your Bag has ${cartQuantity} items.`">MOVE TO WHISHLIST</button>
+        
+        
+        <button class="same" onclick="cartQuantity = cartQuantity + 2; document.querySelector('#cart-Summary').innerText = `Your Bag has ${cartQuantity} items.`">Add 1+1 sale item</button>
+        <h2 id="cart-Summary"></h2>
     </main>
+
+<Script>
+    let cartQuantity = 0;
+    document.querySelector('#cart-Summary').innerText = `Your Bag has ${cartQuantity} items.`
+</Script>
 </body>
 </html>
