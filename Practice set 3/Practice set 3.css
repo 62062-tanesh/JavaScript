@@ -1,0 +1,14 @@
+.AddBag{
+    border: 0cap;
+    background-color: lightgreen;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+.whislist{
+    padding: 5px 30px;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
