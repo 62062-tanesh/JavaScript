@@ -13,13 +13,51 @@
             text-transform: uppercase;
             color: red;
         }
-        
+
     </style>
 </head>
 <body>
     <h1>Bat Ball Stump Game</h1>
     <main>
-        <button>Bat</button>
+        <button onclick="
+        console.log('You have Chosen Bat.');
+
+        let randomNumber = Math.random() * 3;
+        let computerChoice;
+        
+        if (randomNumber > 0 && randomNumber <= 1){
+            computerChoice = 'Bat';
+        }
+        else if(randomNumber > 1 && randomNumber <= 2){
+            computerChoice = 'Ball';
+        }
+        else{
+            computerChoice = 'Stump';
+        }
+
+
+        let resultMsg;
+        
+        if(computerChoice === 'Ball'){
+            resultMsg = 'User Won';
+
+        }else if(computerChoice === 'Bat'){
+            resultMsg = `It's a tie`;
+
+        }
+        else{
+            resultMsg = `Computer Won`;
+        }
+
+        alert(`You have Chosen Bat. Computer choice is ${computerChoice} and ${resultMsg}`);
+
+
+
+
+            ">Bat</button>
+
+
+
         <button>Ball</button>
         <button>Stump</button>
     </main>
