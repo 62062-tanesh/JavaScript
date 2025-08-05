@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1>Bat Ball Stump Game</h1>
-    <div>
+
         <button onclick="console.log('You have Chosen Bat')
         let computerChoice;
         let randomNumber = Math.random()*3;
@@ -38,15 +38,67 @@
             message = 'Computer Won';
         }
         
-        alert(`You Chosen Bat. Computer Chosen ${computerChoice} and ${message}`);
+        alert(`User Chosen Bat. Computer Chosen ${computerChoice} and ${message}`);
         ">Bat</button>
 
+        <!-- Ball Section Start ---------------------- -->
 
-        <button onclick="">Ball</button>
+        <button onclick="
+        randomNumber = Math.random()*3;
+        let computerChoice1;
+        if(randomNumber > 0 && randomNumber <= 1){
+            computerChoice1 = 'Bat';
+        }
+        else if(randomNumber > 1 && randomNumber <= 2){
+            computerChoice1 = 'Ball';
+        }
+        else{
+            computerChoice1 = 'Stump';
+        }
+        // alert(computerChoice);
+        let message1;
+        
+        if(computerChoice1 === 'Bat'){
+            message1 = 'Computer Won';
+        }
+        else if(computerChoice1 === 'Ball'){
+            message1 = `it's a Tie`;
+        }
+        else{
+            message1 = `User Won`;
+        }
+        
+        alert(`User Chosen Ball. Computer Chosen ${computerChoice1} and ${message1}`);
+        ">Ball</button>
 
 
 
-        <button>Stump</button>
-    </div>
+        <button onclick="
+        randomNumber = Math.random()*3;
+        let computerChoice2;
+        if(randomNumber > 0 && randomNumber <= 1){
+            computerChoice2 = 'Bat';
+        }
+        else if(randomNumber > 1 && randomNumber <= 2){
+            computerChoice2 = 'Ball';
+        }
+        else{
+            computerChoice2 = 'Stump';
+        }
+        // alert(computerChoice);
+        let message2;
+        
+        if(computerChoice2 === 'Bat'){
+            message2 = 'User Won';
+        }
+        else if(computerChoice2 === 'Ball'){
+            message2 = `Computer Won`;
+        }
+        else{
+            message2 = `It's a Tie`;
+        }
+        
+        alert(`User Chosen Stump. Computer Chosen ${computerChoice2} and ${message2}`);
+        ">Stump</button>
 </body>
 </html>
