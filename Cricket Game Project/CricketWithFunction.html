@@ -14,18 +14,7 @@
     <h1>Bat Ball Stump Game</h1>
 
         <button onclick="console.log('You have Chosen Bat')
-        let computerChoice;
-        let randomNumber = Math.random()*3;
-        if(randomNumber > 0 && randomNumber <= 1){
-            computerChoice = 'Bat';
-        }
-        else if(randomNumber > 1 && randomNumber <= 2){
-            computerChoice = 'Ball';
-        }
-        else{
-            computerChoice = 'Stump';
-        }
-        // alert(computerChoice);
+        generateComputerChoice();
         let message;
         
         if(computerChoice === 'Bat'){
@@ -44,17 +33,7 @@
         <!-- Ball Section Start ---------------------- -->
 
         <button onclick="
-        randomNumber = Math.random()*3;
-        if(randomNumber > 0 && randomNumber <= 1){
-            computerChoice = 'Bat';
-        }
-        else if(randomNumber > 1 && randomNumber <= 2){
-            computerChoice = 'Ball';
-        }
-        else{
-            computerChoice = 'Stump';
-        }
-        // alert(computerChoice);
+        generateComputerChoice();
         
         if(computerChoice === 'Bat'){
             message = 'Computer Won';
@@ -72,17 +51,7 @@
 
 
         <button onclick="
-        randomNumber = Math.random()*3;
-        if(randomNumber > 0 && randomNumber <= 1){
-            computerChoice = 'Bat';
-        }
-        else if(randomNumber > 1 && randomNumber <= 2){
-            computerChoice = 'Ball';
-        }
-        else{
-            computerChoice = 'Stump';
-        }
-        // alert(computerChoice);
+        generateComputerChoice();
         
         if(computerChoice === 'Bat'){
             message = 'User Won';
@@ -96,5 +65,21 @@
         
         alert(`User Chosen Stump. Computer Chosen ${computerChoice} and ${message}`);
         ">Stump</button>
+
+        <script>
+            let computerChoice;
+            function generateComputerChoice(){
+                let randomNumber = Math.random()*3;
+        if(randomNumber > 0 && randomNumber <= 1){
+            computerChoice = 'Bat';
+        }
+        else if(randomNumber > 1 && randomNumber <= 2){
+            computerChoice = 'Ball';
+        }
+        else{
+            computerChoice = 'Stump';
+        }
+            }
+        </script>
 </body>
 </html>
