@@ -7,12 +7,12 @@
 </head>
 <body>
     <script>
-        // let Myntra  = {
-        //     Name : "Shirt",
-        //     Size:'XL',
-        //     Fabric: 'Cotton',
-        //     'Delivery-Time' : "Same Day",
-        // };
+        let Myntra  = {
+            Name : "Shirt",
+            Size:'XL',
+            Fabric: 'Cotton',
+            'Delivery-Time' : "Same Day",
+        };
 
         // console.log(Myntra.Name);
         // console.log(Myntra);
@@ -23,13 +23,48 @@
         // console.log(Myntra['Delivery-Time']);
 
 
-        let practice = {
-            message: 'Good Job',
-            Status: 'Complete',
+        // let practice = {
+        //     message: 'Good Job',
+        //     Status: 'Complete',
+        // }
+
+        // let {message,Status} = practice;
+        // console.log(`${message} and ${Status}`);
+
+        function isIdenticalProduct(Product1, Product2){
+           
+            if(typeof Product1 !== 'object' || typeof Product2 !== 'object'){
+                console.log('Parameter Passed was not an Object.');
+            }
+
+             if(Product1 == Product2){
+                return true;
+            }
+
+            if(Product1.Name == Product1.Name && Product1.Size == Product2.Size && Product1.Fabric == Product2.Fabric){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
 
-        let {message,Status} = practice;
-        console.log(`${message} and ${Status}`);
+        let Myntra2  = {
+            Name : "Shirt",
+            Size:'XL',
+            Fabric: 'Cotton',
+            'Delivery-Time' : "Same Day",
+        };
+        let Myntra3  = {
+            Name: "Thirt",
+            Size:'M',
+            Fabric: 'Cotton',
+            'Delivery-Time' : "Same Day",
+        };
+
+        console.log(isIdenticalProduct(Myntra, Myntra2));
+        console.log(isIdenticalProduct(Myntra, Myntra3));
+        
     </script>
 </body>
 </html>
