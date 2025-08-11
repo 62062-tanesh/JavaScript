@@ -7,11 +7,32 @@
     <style>
       body {
         text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
+      .choice-image{
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        border-radius: 100px;
+      }
+      .reset-button{
+        width: 200px;
+        height: 50px;
+        border-radius: 20px ;
+        border-color: rgb(68, 3, 153);
+        background-color: red;
+        color: white;
+        font-size: 25px;
+      }
+      .heading{
+        color: rgb(3, 1, 107);
+        font-size: 50px;
+      }
+
     </style>
   </head>
   <body>
-    <h1>Bat Ball Stump Game</h1>
+    <h1 class="heading">Bat Ball Stump Game</h1>
 
     <button
       onclick="console.log('You have Chosen Bat')
@@ -23,7 +44,7 @@
         
         "
     >
-      Bat
+      <img src="Bat.png" alt="Bat Image" class="choice-image">
     </button>
 
     <!-- Ball Section Start ---------------------- -->
@@ -37,7 +58,7 @@
 
         "
     >
-      Ball
+      <img src="Ball.png" alt="Ball Image" class="choice-image">
     </button>
 
     <!-- Stump Section Start ---------------------- -->
@@ -50,11 +71,19 @@
         displayResult('stump', computerChoice, ans);
         "
     >
-      Stump
+      <img src="Stump.png" alt="Stump Image" class="choice-image">
     </button>
 
+    
+
+
+    <h1 id="user"></h1>
+    <h1 id="computer"></h1>
+    <h1 id="result"></h1>
+    <h1 id="score"></h1>
+
     <button onclick="localStorage.clear()
-    resetScore()">Reset</button>
+    resetScore()" class="reset-button">Reset</button>
 
     <script>
       let scoreStr = localStorage.getItem("Score");
@@ -71,8 +100,10 @@
     
 
       score.displayScore = function () {
-        return `Win = ${score.Win} Lose = ${score.Lose} Tie = ${score.Tie}`;
+        return `Win = ${score.Win}, Lose = ${score.Lose}, Tie = ${score.Tie}`;
       };
+
+      displayResult();
     }
 
       function generateComputerChoice() {
@@ -128,10 +159,13 @@
       function displayResult(userChoice, ComputerChoice1, result) {
         localStorage.setItem("score", JSON.stringify(score));
 
-        alert(
-          `User Chosen ${userChoice} and Computer Chosen ${ComputerChoice1} and ${result}.
-      ${score.displayScore()}`
-        );
+        document.querySelector('#user').innerText = userChoice ? `You have Chosen: ${userChoice}` : '';
+
+        document.querySelector('#computer').innerText = ComputerChoice1 ? `Computer Chosen: ${ComputerChoice1}` : '';
+
+        document.querySelector('#result').innerText = result ? `Result = ${result}` : ``;
+
+        document.querySelector('#score').innerText = score.displayScore();
       }
     </script>
   </body>
