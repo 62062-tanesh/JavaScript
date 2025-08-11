@@ -53,19 +53,27 @@
       Stump
     </button>
 
+    <button onclick="localStorage.clear()
+    resetScore()">Reset</button>
+
     <script>
-        let score = {
-            Win : 0,
-            Lose : 0,
-            Tie : 0,
-            
-        };
+      let scoreStr = localStorage.getItem("Score");
+      let score;
+      resetScore(scoreStr);
 
-        score.displayScore = function(){
-              return `Win = ${score.Win} Lose = ${score.Lose} Tie = ${score.Tie}`
-            }
+    function resetScore(scoreStr){
 
+      score = scoreStr ? JSON.parse(scoreStr) : {
+        Win: 0,
+        Lose: 0,
+        Tie: 0,
+      };
+    
 
+      score.displayScore = function () {
+        return `Win = ${score.Win} Lose = ${score.Lose} Tie = ${score.Tie}`;
+      };
+    }
 
       function generateComputerChoice() {
         let computerChoice;
@@ -118,15 +126,13 @@
       }
 
       function displayResult(userChoice, ComputerChoice1, result) {
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem("score", JSON.stringify(score));
 
-         alert(
-            `User Chosen ${userChoice} and Computer Chosen ${ComputerChoice1} and ${result}.
+        alert(
+          `User Chosen ${userChoice} and Computer Chosen ${ComputerChoice1} and ${result}.
       ${score.displayScore()}`
-          );
-        }
-
-
+        );
+      }
     </script>
   </body>
 </html>
