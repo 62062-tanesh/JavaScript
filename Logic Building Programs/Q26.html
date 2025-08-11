@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = parseInt(prompt('Enter A Number'));
+        let org = num1;
+        let sum = 0;
+        while(num1>0){
+            let rem = num1%10;
+            sum = sum + ((rem*rem*rem));
+            num1 = parseInt(num1/10);
+        }
+        if(sum == org){
+            document.writeln(`${org} is Armstrong Number.`);
+        }else{
+            document.writeln(`${org} is Not Armstrong Number.`);
+        }
+    </script>
+</body>
+</html>

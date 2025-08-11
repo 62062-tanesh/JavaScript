@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        let DecimalNo = 9;
+        let BinaryNo = 0;
+        let flag = 1;
+        while(DecimalNo>0){
+            let rem = DecimalNo%2;
+            BinaryNo = BinaryNo + (rem*flag);
+            flag = flag*10;
+            DecimalNo = parseInt(DecimalNo/2); 
+        }
+        document.writeln(BinaryNo);
+    </Script>
+</body>
+</html>
