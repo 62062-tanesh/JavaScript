@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+
+        <button onclick="console.log('You have Chosen Bat')
+        let computerChoice;
+        let randomNumber = Math.random()*3;
+        if(randomNumber > 0 && randomNumber <= 1){
+            computerChoice = 'Bat';
+        }
+        else if(randomNumber > 1 && randomNumber <= 2){
+            computerChoice = 'Ball';
+        }
+        else{
+            computerChoice = 'Stump';
+        }
+        // alert(computerChoice);
+        let message;
+        
+        if(computerChoice === 'Bat'){
+            message = `it's a Tie`;
+        }
+        else if(computerChoice === 'Ball'){
+            message = `User Won`;
+        }
+        else{
+            message = 'Computer Won';
+        }
+        
+        alert(`User Chosen Bat. Computer Chosen ${computerChoice} and ${message}`);
+        ">Bat</button>
+
+        <!-- Ball Section Start ---------------------- -->
+
+        <button onclick="
+        randomNumber = Math.random()*3;
+        if(randomNumber > 0 && randomNumber <= 1){
+            computerChoice = 'Bat';
+        }
+        else if(randomNumber > 1 && randomNumber <= 2){
+            computerChoice = 'Ball';
+        }
+        else{
+            computerChoice = 'Stump';
+        }
+        // alert(computerChoice);
+        
+        if(computerChoice === 'Bat'){
+            message = 'Computer Won';
+        }
+        else if(computerChoice === 'Ball'){
+            message = `it's a Tie`;
+        }
+        else{
+            message = `User Won`;
+        }
+        
+        alert(`User Chosen Ball. Computer Chosen ${computerChoice} and ${message}`);
+        ">Ball</button>
+
+
+
+        <button onclick="
+        randomNumber = Math.random()*3;
+        if(randomNumber > 0 && randomNumber <= 1){
+            computerChoice = 'Bat';
+        }
+        else if(randomNumber > 1 && randomNumber <= 2){
+            computerChoice = 'Ball';
+        }
+        else{
+            computerChoice = 'Stump';
+        }
+        // alert(computerChoice);
+        
+        if(computerChoice === 'Bat'){
+            message = 'User Won';
+        }
+        else if(computerChoice === 'Ball'){
+            message = `Computer Won`;
+        }
+        else{
+            message = `It's a Tie`;
+        }
+        
+        alert(`User Chosen Stump. Computer Chosen ${computerChoice} and ${message}`);
+        ">Stump</button>
+</body>
+</html>
