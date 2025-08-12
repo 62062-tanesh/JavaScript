@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .js-odd{
+            background-color: green;
+        }
+        .js-even{
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        " class="heading"></h2>
+
+        <button onclick="pressCount();" id="count">0</button>
+
+
+    </main>
+    <script>
+        // function greeting(personName = 'Dear'){
+        //     let time = new Date().getHours();
+        //     document.querySelector('.heading').innerText = time;
+        //     let heading = document.querySelector('.heading');
+
+        //     if(time > 5 && time < 12){
+        //         heading.innerText = `Good Morning ${personName}`;
+        //     }
+        //     if(time > 12 && time < 18){
+        //         heading.innerText = `Good AfterNoon ${personName}`;
+        //     }
+        //     else{
+        //     heading.innerText = `Good Night ${personName}`;
+        //     }
+        // }
+        // greeting();
+
+
+        let count = 0;
+        function pressCount(){
+            count ++;
+            let button = document.querySelector('#count').innerText = count;
+
+            if(count % 2 === 0){
+                button.classList.remove('js-odd');
+                button.classList.add('js-even');
+            }else{
+                button.classList.remove('js-odd');
+                button.classList.add('js-even');
+            }
+        }
+
+        document.querySelector('.press').innerText = count;
+    </script>
+</body>
+</html>
