@@ -11,7 +11,12 @@
             return n1+n2;
         }
         console.log(sum(3,2));
+    let sumThreeNumbers = function(num1, num2, num3){
+        let sum1 = sum(num1, num2);
+        return sum1 + num3;
+    }
 
+    console.log(sumThreeNumbers(5,3,8));
 
     </script>
 </body>
