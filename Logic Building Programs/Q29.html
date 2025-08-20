@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 777;
+        while(a>9){
+            let sum = 0;
+            while(a>0){
+                sum += parseInt(a%10);
+                a = a/10;
+            }
+            sum = a;
+        }
+        document.writeln(`The Single Digit sum is : ${a}`);
+
+        console.log(a);
+    </script>
+</body>
+</html>
