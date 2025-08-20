@@ -12,9 +12,9 @@
             let sum = 0;
             while(a>0){
                 sum += parseInt(a%10);
-                a = a/10;
+                a = parseInt(a/10);
             }
-            sum = a;
+            a = sum;
         }
         document.writeln(`The Single Digit sum is : ${a}`);
 
