@@ -11,7 +11,12 @@
       let id =  setTimeout(message, 2000);
         console.log(`ab toh uth jao`);
         clearTimeout(id);
-        
+
+
+    let id2 = setInterval(message, 1000);
+    setTimeout(() => clearInterval(id2), 5000);
+
+
 </script>
 </body>
 </html>
