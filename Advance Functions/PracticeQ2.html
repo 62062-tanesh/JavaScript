@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+    <script>
+        let add = () => console.log("Good Morning");
+
+        let runTwice = (inputFunction, n) => {
+            for(let i=1; i<=n; i++){
+                inputFunction();
+                console.log(i);
+            }
+        } 
+
+        (runTwice(add,5));
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <style>
+        .btn{
+            height: 30px;
+            width: 100px;
+            background-color: red;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .doubleSize{
+            height: 60px;
+            width: 200px;
+            background-color: rgb(38, 0, 255);
+            color: white;
+            font-weight: 700;
+            font-size: 28px;
+            border: none;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" >Click me</button>
+
+
+
+    <script>
+        let buttonElement = document.querySelector('.btn');
+        buttonElement.addEventListener('click', event => setTimeout(doubleTheSize, 2000));
+
+       function doubleTheSize(){
+            let buttonElement = document.querySelector('.btn');
+            buttonElement.classList.add('doubleSize');
+        }
+    </script>
+</body>
+</html>
