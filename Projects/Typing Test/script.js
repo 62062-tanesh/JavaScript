@@ -10,7 +10,8 @@ const texts = [
 let currentText = '';
 let currentIndex = 0;
 let startTime = null;
-let timeleft = null;
+let timeleft = 60;
+let timer = null;
 let isActive = false;
 let erros = 0;
 let totalchars = 0;
@@ -28,7 +29,7 @@ const timerElement = document.getElementById('timer');
 const tryAgainBtn = document.getElementById('tryAgainBtn');
 
 function loadNewText(){
-    currentText = texts[Math.random() * texts.length];
+    currentText = texts[Math.floor(Math.random() * texts.length)];
     displayText();
 
 }
