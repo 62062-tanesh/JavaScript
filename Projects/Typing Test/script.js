@@ -35,5 +35,24 @@ function loadNewText(){
 }
 
 function displayText(){
-    textContent.innerHTML = currentText.split('').map((char, index) => `<span class="char pending" >`)
+    textContent.innerHTML = currentText.split('').map((char, index) => `<span class="char pending" data-index="${index}">${char}</span>`).join('');
+}
+
+function startTest(){
+    isActive = true;
+    startTime = Date.now();
+    typingInput.disabled = false;
+    typingInput.placeholder = "start typing...";
+    typingInput.focus();
+    startBtn.style.display = 'none';
+    progressText.textContent = 'Test in progress...';
+    startTimer();
+}
+
+function startTimer(){
+    timer = setInterval(()=>{
+        timeleft--;
+        timerElement.querySelector('span').textContent = timeleft;
+        if(timeleft <= 0)
+    })
 }
