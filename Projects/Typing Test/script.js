@@ -56,3 +56,6 @@ function startTimer(){
         if(timeleft <= 0)
     })
 }
+function fine(){
+    console.log
+}
