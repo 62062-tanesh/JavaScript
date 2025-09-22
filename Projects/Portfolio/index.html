@@ -14,13 +14,15 @@
         <div class="container">
             <nav>
                 <img src="personal-portfolio-img/images/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>UI/UX Designer</p>
@@ -156,7 +158,7 @@
 
     <!-------------Contact--------------------->
 
-    <div id="container">
+    <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -177,10 +179,14 @@
                         <input type="text" name="Name" placeholder="Enter Your Name" required>
                         <input type="email" name="email" placeholder="Enter Your Email" required>
                         <textarea name="Messagee" rows="6" placeholder="Enter Your Messagee"></textarea>
-                        <button type="submit">Submit</button>
+                        <button type="submit" class="btn2">Submit</button>
                     </form>
                 </div>
             </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> Tanesh. Made with <i class="fa-solid fa-heart"></i></p>
         </div>
     </div>
 
@@ -203,6 +209,19 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
     </script>
 </body>
 </html>
