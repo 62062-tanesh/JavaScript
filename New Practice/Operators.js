@@ -1,0 +1,11 @@
+console.log("Hello world");
+a = 4;
+b = 5.4;
+c = "Tanesh";
+d = true;
+e = 'q';
+console.log(a,typeof(a));
+console.log(typeof(b));
+console.log(typeof(c));
+console.log(typeof(d));
+console.log(typeof(e));
