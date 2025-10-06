@@ -5,4 +5,7 @@ let b = {
     Section : "F",
     college : "NIET"
 }
-console.log(b);
+// console.log(b);
+// b.roll = 23;
+// console.log(b);
+
