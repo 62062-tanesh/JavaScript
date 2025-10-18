@@ -7,3 +7,12 @@ class Person{
     }
 }
 
+class Engineer extends Person{
+    work(){
+        console.log("Working on the Project");
+    }
+}
+
+let Tanesh = new Engineer();
+Tanesh.sleep();
+Tanesh.work();
