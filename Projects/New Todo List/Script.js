@@ -11,7 +11,16 @@ function saveTodos(){
 }
 function createTodoNode(todo, index){
     const li = document.createElement('input');
-    checkbox.type
+    checkbox.type = 'checkbox';
+    checkbox.checked = !!todo.completed;
+    checkbox.addEventListener("change",()=>{
+        todo.completed = checkbox.checkbox;
+
+
+        saveTodos();  
+    })
+
+    
 }
 
 function render(){
