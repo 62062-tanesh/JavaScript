@@ -172,21 +172,22 @@
 
                     </div>
 
-                    <a href="personal-portfolio-img/images/my-cv.pdf" download="" class="btn btn2">Downlaod My Resume</a>
+                    <a href="personal-portfolio-img/images/Tanesh_Resume.pdf" download="" class="btn btn2">Downlaod My Resume</a>
                 </div>
                 <div class="contact-right">
-                    <form action="">
+                    <form action="" name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Enter Your Name" required>
-                        <input type="email" name="email" placeholder="Enter Your Email" required>
-                        <textarea name="Messagee" rows="6" placeholder="Enter Your Messagee"></textarea>
+                        <input type="email" name="Email" placeholder="Enter Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Enter Your Message"></textarea>
                         <button type="submit" class="btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
 
         <div class="copyright">
-            <p>Copyright <i class="fa-regular fa-copyright"></i> Tanesh. Made with <i class="fa-solid fa-heart"></i></p>
+            <p>Copyright <i class="fa-regular fa-copyright"></i> Tanesh | 2024</i></p>
         </div>
     </div>
 
@@ -223,5 +224,24 @@
         }
 
     </script>
+
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzB4ODlCE6FNHAsMHEUFtxcpeeBnI_fCSNGsLj4Zncjotr-marzDzCRf-MZqmawiEaqpg/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent Successfully";
+        setTimeout(function(){
+            msg.innerHTML = "";
+        },3000)
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 </html>
