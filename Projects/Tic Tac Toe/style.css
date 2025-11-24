@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background-color: #c0c0c0;
+    background-color: white;
     text-align: center;
 }
 .container{
@@ -28,12 +28,13 @@ body{
     width: 18vmin;
     border-radius: 1rem;
     border: none;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    box-shadow: 0 0 1rem rgba(147, 4, 4, 0.3);
     font-size: 5vmin;
-    color: #738276;
+    background-color: rgb(195, 0, 255);
+    color: white;
 
 }
-.reset{
+#reset-Btn{
     padding: 1rem;
     font-size: large;
     border-radius: 1.25rem;
@@ -41,4 +42,23 @@ body{
     background-color: black;
     color: white;
     
+}
+#new-btn{
+    padding: 1rem;
+    font-size: large;
+    border-radius: 1.25rem;
+    border: none;
+    background-color: black;
+    color: white;
+}
+#msg{
+    color: #ff0000;
+    font-size: 8vmin;
+}
+#msg-container{
+    height: 30vmin; 
+
+}
+.hide{
+    display: none;
 }
