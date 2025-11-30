@@ -46,13 +46,26 @@
 // });
 
 
-function asyncFunc(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{console.log("Data1"); resolve("success")},4000)
-    })
-}
-console.log("Fetching Data1.........");
-let p1 = asyncFunc();
-p1.then((res)=>{
-    console.log("Hello",res);
-})
+// function asyncFunc(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{console.log("Data1"); resolve("success")},4000)
+//     })
+// }
+// console.log("Fetching Data1.........");
+// let p1 = asyncFunc();
+// p1.then((res)=>{
+//     console.log("Hello",res);
+// })
+
+
+// printHello();
+
+// function printHello(){
+//     console.log("Hello");
+// }
+
+
+console.log(typeof 45);
+console.log(typeof "Hello");
+console.log(typeof true);
+console.log(typeof undefined);
